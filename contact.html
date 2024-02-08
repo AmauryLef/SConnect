@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="index.html"><img src="/images/logoscoonect.jpg" alt="Logo" class="navbar-logo"></a>
+    <span class="navbar-name"><a href="index.html"><b>Sconnect</b></a></span>
+    <button class="navTel"><a href="tel:0660377404">+++ 06.60.37.74.04</a></button>
+  </div>
+  <div class="navbar-right">
+    <button class="navbar-btn"><a href="index.html"><b>Acceuil</b></a></button>
+    <button class="navbar-btn"><a href="presentation.html"><b>A Propos</b></a></button>
+    <button class="navbar-btn"><a href="services.html"><b>Services</b></a></button>
+    <div class="navbar-dropdown">
+      <button class="navbar-dropdown-btn"><b>DropDown</b>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="navbar-dropdown-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+      </div>
+    </div>
+    <button class="navbar-btn"><a href="contact.html"><b>Contact</b></a></button>
+  </div>
+</nav>
+
+
+<div id="body">
+
+
+<div class="contact-infos">
+  <h2>Contactez-nous</h2><br><br>
+  <p><b>Email:</b></p><p><a href="mailto:soucheconnect@gmail.com? ">soucheconnect@gmail.com</a></p><br>
+  <p><b>Téléphone:</b></p><p> <a href="tel:0603911552">06 03 91 15 52</a></p><br>
+  <p><b>Adresse:</b></p><p><a href="https://www.google.com/maps/place/SCONNECT+INFORMATIQUE/@48.8740394,2.2987042,15z/data=!4m6!3m5!1s0x47e66f026fe21df1:0xc769a5dbe929b088!8m2!3d48.8740394!4d2.2987042!16s%2Fg%2F11pkjzy73f?entry=ttu">
+  Rue Arsène Houssaye, Paris - 75008 </a></p><br>
+  <div class="contact-infos-horaires">
+
+    <h3><b>Horaires d'ouverture</b></h3>
+    <p><b>Lundi - Mardi - Mercredi - Jeudi - Vendredi</b></p>
+
+    <p><b>8h30 - 18h30</b></p>
+  </div>
+
+</div>
+
+
+<div class="contact-form">
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (!name || !email || !message) {
+        alert('Veuillez remplir tous les champs du formulaire.');
+        return;
+      }
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'send_mail.php', true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          alert('Message envoyé avec succès.');
+          document.getElementById('contactForm').reset();
+        }
+      };
+      xhr.send('name=' + name + '&email=' + email + '&message=' + message);
+    });
+  </script>
+  <h2>Formulaire de contact</h2>
+  <form id="contactForm" name="ContactForm" method="post" action="#">
+    <input type="text" id="name" name="name" placeholder="Nom" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <textarea id="message" name="message" rows="6" placeholder="Votre Demande" required></textarea>
+    <button type="submit" >Envoyer</button>
+    <br>
+    <h1 style="color: red">En construction</h1>
+  </form>
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body>
+
+<footer>
+  <div class="logo">
+    <img src="/images/LOGO_SCONNECT.jpg">
+    <h3>Sconnect</h3>
+    <button class="back-top" id="btnHaut"> Remonter en Haut</button>
+
+    <script>
+      var btnHaut = document.getElementById("btnHaut");
+      btnHaut.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+  </div>
+  <div class="column">
+    <div class="category">
+      <a><h3>Faites une demande de contact</h3></a>
+      <form action="/envoyer_message" method="post">
+        <label for="nom">Nom : </label><br><input type="text" id="nom" name="nom" placeholder="Nom" required class="form-text">
+        <br>
+        <br><label for="email">E-mail : </label><br><input type="email" id="email" name="email" placeholder="abc@xyz.fr" required class="form-text">
+        <br><br>
+        <button type="submit" class="envoyer">Envoyer</button>
+      </form>
+
+    </div>
+    <div class="category" id="contact-footer">
+      <br><a><h3>Ou Nous retrouver ?</h3></a>
+      <br>
+      <ul>
+        <li>Téléphone: <a href="tel:0660377404">06.60.37.74.04</a></li><br>
+        <li>Mail: <a href="mailto:soucheconnect@gmail.com? ">soucheconnect@gmail.com</a></li><br>
+        <li>Adresse: <a href="https://www.google.fr/maps/place/SCONNECT+INFORMATIQUE/@48.8740429,2.2961239,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66f026fe21df1:0xc769a5dbe929b088!8m2!3d48.8740394!4d2.2987042!16s%2Fg%2F11pkjzy73f?entry=ttu" target="_blank">
+          Rue Arsène Houssaye, <br> Paris - 75008</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="column">
+    <div class="category" id="navigation-footer">
+      <a><h3>Navigation</h3></a><br>
+      <ul>
+        <li><a href="index.html">Home</a></li><br>
+        <li><a href="presentation.html">A Propos</a></li><br>
+        <li><a href="contact.html">Contact</a></li><br>
+        <li><a href="services.html">Services</a></li><br>
+        <li><a href="mentions.html">Mentions</a></li><br>
+      </ul>
+    </div>
+    <div class="category">
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="category">
+      <a href="services.html"><h3>Services</h3></a><br>
+      <ul>
+        <li><a href="services.html">Audits</a></li><br>
+        <li><a href="services.html">Tests</a></li><br>
+        <li><a href="services.html">Analyses</a></li><br>
+        <li><a href="services.html">Expertise</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <br> <br><a href="mentions.html"><h3>Mentions Légales</h3></a>
+      <br><br><br><br><br>
+      <p>Site crée par <a>Amaury Lefevre</a></p>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="category">
+      <a><h3>Réseaux</h3></a>
+      <ul class="wrapper">
+        <li class="icon facebook">
+          <span class="tooltip">Facebook</span>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </li>
+        <a href="https://www.linkedin.com/company/soucheconnect/"><li class="icon linkedin">
+          <span class="tooltip">LinkedIn</span>
+          <span><i class="fab fa-linkedin"></i></span>
+        </li></a>
+        <li class="icon instagram">
+          <span class="tooltip">Instagram</span>
+          <span><i class="fab fa-instagram"></i></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</html>

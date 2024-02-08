@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="presentation.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="index.html"><img src="/images/logoscoonect.jpg" alt="Logo" class="navbar-logo"></a>
+    <span class="navbar-name"><a href="index.html"><b>Sconnect</b></a></span>
+    <button class="navTel"><a href="tel:0660377404">+++ 06.60.37.74.04</a></button>
+  </div>
+  <div class="navbar-right">
+    <button class="navbar-btn"><a href="index.html"><b>Acceuil</b></a></button>
+    <button class="navbar-btn"><a href="presentation.html"><b>A Propos</b></a></button>
+    <button class="navbar-btn"><a href="services.html"><b>Services</b></a></button>
+    <div class="navbar-dropdown">
+      <button class="navbar-dropdown-btn"><b>DropDown</b>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="navbar-dropdown-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+      </div>
+    </div>
+    <button class="navbar-btn"><a href="contact.html"><b>Contact</b></a></button>
+  </div>
+</nav>
+
+<div id="body">
+  <div id="description">
+    <div id="image">
+      <img src="/images/logoscoonect.jpg">
+    </div>
+    <div id="Texte">
+      <h4>Chez Sconnect,</h4>
+
+      <p> Nous nous engageons à protéger votre entreprise contre les menaces numériques en établissant une défense proactive et personnalisée.
+        Notre équipe hautement qualifiée de spécialistes en sécurité exploite des technologies de pointe au sein de notre Security Operations Center (SOC),
+        assurant une surveillance constante, une détection précoce des incidents et une réponse rapide aux cybermenaces.</p>
+
+      <p>Au cœur de notre approche se trouve une combinaison unique de compétences humaines et de solutions technologiques avancées.
+        Nos analystes cyber SOC sont formés pour anticiper et contrer les attaques sophistiquées, offrant une protection robuste à votre infrastructure informatique.
+        Nous collaborons étroitement avec nos clients pour comprendre leurs besoins spécifiques, élaborant ainsi des stratégies de sécurité personnalisées pour garantir une cybersécurité optimale.</p>
+
+      <p>Chez Sconnect, nous sommes fiers de notre engagement envers l'excellence et l'innovation.
+        Faites équipe avec nous pour renforcer la sécurité de votre entreprise dans un monde numérique en constante évolution.
+        Votre tranquillité d'esprit est notre priorité, et nous sommes prêts à relever les défis complexes de la cybernétique pour vous permettre de vous concentrer sur ce que vous faites de mieux:
+        faire prospérer votre entreprise.</p><br>
+    </div>
+  </div>
+
+  <div class="statistics-container">
+      <div class="statistic-box">
+          <h2>2</h2><br>
+          <p>années d'expertise supplémentaires</p>
+      </div>
+      <div class="statistic-box">
+          <h2>3k</h2><br>
+          <p>Capital Social ne faisant qu'augmenter</p>
+      </div>
+      <div class="statistic-box">
+          <h2>7</h2><br>
+          <p>Domaines d'assistance et de Services</p>
+      </div>
+      <div class="statistic-box">
+          <h2>Statistique 4</h2><br>
+          <p>Données ou description de la statistique 4</p>
+      </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+<footer>
+  <div class="logo">
+    <img src="/images/LOGO_SCONNECT.jpg">
+    <h3>Sconnect</h3>
+    <button class="back-top" id="btnHaut"> Remonter en Haut</button>
+
+    <script>
+      var btnHaut = document.getElementById("btnHaut");
+      btnHaut.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+  </div>
+  <div class="column">
+    <div class="category">
+      <a><h3>Faites une demande de contact</h3></a>
+      <form action="/envoyer_message" method="post">
+        <label for="nom">Nom : </label><br><input type="text" id="nom" name="nom" placeholder="Nom" required class="form-text">
+        <br>
+        <br><label for="email">E-mail : </label><br><input type="email" id="email" name="email" placeholder="abc@xyz.fr" required class="form-text">
+        <br><br>
+        <button type="submit" class="envoyer">Envoyer</button>
+      </form>
+
+    </div>
+    <div class="category" id="contact-footer">
+      <br><a><h3>Ou Nous retrouver ?</h3></a>
+      <br>
+      <ul>
+        <li>Téléphone: <a href="tel:0660377404">06.60.37.74.04</a></li><br>
+        <li>Mail: <a href="mailto:soucheconnect@gmail.com? ">soucheconnect@gmail.com</a></li><br>
+        <li>Adresse: <a href="https://www.google.fr/maps/place/SCONNECT+INFORMATIQUE/@48.8740429,2.2961239,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66f026fe21df1:0xc769a5dbe929b088!8m2!3d48.8740394!4d2.2987042!16s%2Fg%2F11pkjzy73f?entry=ttu" target="_blank">
+          Rue Arsène Houssaye, <br> Paris - 75008</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="column">
+    <div class="category" id="navigation-footer">
+      <a><h3>Navigation</h3></a><br>
+      <ul>
+        <li><a href="index.html">Home</a></li><br>
+        <li><a href="presentation.html">A Propos</a></li><br>
+        <li><a href="contact.html">Contact</a></li><br>
+        <li><a href="services.html">Services</a></li><br>
+        <li><a href="mentions.html">Mentions</a></li><br>
+      </ul>
+    </div>
+    <div class="category">
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="category">
+      <a href="services.html"><h3>Services</h3></a><br>
+      <ul>
+        <li><a href="services.html">Audits</a></li><br>
+        <li><a href="services.html">Tests</a></li><br>
+        <li><a href="services.html">Analyses</a></li><br>
+        <li><a href="services.html">Expertise</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <br> <br><a href="mentions.html"><h3>Mentions Légales</h3></a>
+      <br><br><br><br><br>
+      <p>Site crée par <a>Amaury Lefevre</a></p>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="category">
+      <a><h3>Réseaux</h3></a>
+      <ul class="wrapper">
+        <li class="icon facebook">
+          <span class="tooltip">Facebook</span>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </li>
+        <a href="https://www.linkedin.com/company/soucheconnect/"><li class="icon linkedin">
+          <span class="tooltip">LinkedIn</span>
+          <span><i class="fab fa-linkedin"></i></span>
+        </li></a>
+        <li class="icon instagram">
+          <span class="tooltip">Instagram</span>
+          <span><i class="fab fa-instagram"></i></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

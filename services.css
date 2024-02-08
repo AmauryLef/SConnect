@@ -1,0 +1,101 @@
+#body {
+   width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 155vh;
+}
+
+.container {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10vh;
+}
+.row {
+    width: 100%;
+}
+
+.accordion-container {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 100%;
+}
+.accordion-tab label {
+    background-color: #2D8B9B;
+    color: white;
+    display: block;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 2px 0;
+    position: relative;
+}
+.accordion-tab label:hover {
+    text-align: center;
+    transition: 5s;
+}
+
+.accordion-tab label::after {
+    content: '+';
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: large;
+    font-weight: 500;
+    color: #9CCBCB;
+}
+
+.accordeon-image {
+    background-color: white;
+    width: 10%;
+    height: auto;
+    margin-right: 1vh;
+}
+
+.accordion-tab input:checked ~ label::after {
+    content: '-';
+    font-weight: 600;
+    font-size: xx-large;
+    top: 0;
+}
+
+.accordion-tab input {
+    display: none;
+}
+
+.accordion-tab > .accordion-content {
+    max-height: 0;
+    overflow:hidden ;
+    transition: 0.5s;
+    background-color: #9CCBCB;
+    color: black;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    top: -10px;
+    z-index: -1;
+    border: 1px solid rgba(128, 128, 128, 0.204);
+}
+
+.accordion-content p {
+    padding: 20px;
+}
+
+.accordion-tab input:checked ~ .accordion-content {
+    max-height: 100vh;
+    box-shadow: 5px 5px 10px rgb(184, 183, 183);
+}
+
+
+.carousel-inner {
+    margin-top: 20vh;
+    height: 60vh;
+}
+
+.carousel-item {
+    text-align: center;
+    color: #2D8B9B;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+}

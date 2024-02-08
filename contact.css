@@ -1,0 +1,97 @@
+#body {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    height: 130vh;
+}
+.contact-infos {
+    width: 27%;
+    height: 80vh;
+    background-color: #9CCBCB;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    float: left;
+    box-sizing: border-box;
+}
+.contact-infos h2 {
+    text-align: center;
+}
+.contact-infos p {
+   margin-left: 10%;
+}
+.contact-infos a  {
+  text-decoration: none;
+    color: black;
+}
+.contact-infos a:hover  {
+  text-decoration: none;
+    color: white;
+}
+.contact-infos-horaires {
+    background-color: white;
+    width: 90%;
+    border-radius: 15px;
+    height: 20vh;
+    margin-left: 5%;
+    margin-bottom: 2vh;
+    color: black;
+}
+.contact-infos-horaires h3 {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 25px;
+}.contact-infos-horaires p {
+  margin-left: 2vh;
+}
+
+
+
+.contact-form {
+    width: 35%;
+    box-sizing: border-box;
+    background-color: #2D8B9B;
+    box-shadow: 7px 0px 10px black;
+    height: 75vh;
+    margin-top: 13vh;
+    margin-right: 18%;
+    float: right;
+}
+.contact-form h2 {
+ text-align: center;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #9CCBCB;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: black;""
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}

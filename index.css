@@ -1,0 +1,373 @@
+#depart {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 85vh;
+}
+
+#div2 {
+    width: 100%;
+    height: 80vh;
+    top: 17vh;
+    justify-content: right;
+    transition: all 0.5s ease-in-out;
+    position:absolute;
+    z-index:1;
+}
+#div2 img {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    height: 80vh;
+}
+#texte {
+    position:relative;
+    top: 15vh;
+    width:600px;
+    height:200px;
+    font-size:150%;
+    margin-left: 60%;
+    color: white;
+    z-index: 2;
+}
+
+
+#defilement {
+    width: 100%;
+}
+#defilement h1 {
+    color: black;
+    font-family: Arial, sans-serif;
+    top: 115vh;
+    text-align: center;
+    left: 8%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+.title {
+    top: 120vh;
+    position: absolute;
+    text-align: center;
+    left: 5%;
+}
+
+
+.slider {
+    position: relative;
+    left: 20%;
+    width: 56vw;
+    height: 300px;
+    margin: 50px auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    text-align: center;
+    transform: translatex(-50%);
+    z-index: 1000;
+    list-style: none;
+    text-align: center;
+}
+
+.slider input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-controls label {
+    display: inline-block;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #212121;
+    transition: background-color 0.2s linear;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"] {
+    background-color: #2D8B9B;
+}
+
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+    background-color: #2D8B9B;
+}
+
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #2D8B9B;
+}
+#btn-4:checked ~ .slider-controls label[for="btn-4"] {
+    background-color: #2D8B9B;
+}
+
+/* SLIDES */
+
+.slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transform: translatex(-100%);
+    transition: transform 250ms linear;
+}
+
+.slide-content {
+    width: 400px;
+}
+
+.slide-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.slide-text {
+    margin-bottom: 20px;
+}
+
+.slide-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: #2D8B9B;
+}
+.slide-image{
+    border: 1px solid black;
+    width: 40%;
+    height: 30vh;
+    bottom: 2vh;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    background-color: #9CCBCB;
+}
+
+/* Slide animations */
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    transform: translatex(0);
+    opacity: 1;
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    transform: translatex(0);
+    opacity: 1;
+}
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    transform: translatex(0);
+    opacity: 1;
+}
+#btn-4:checked ~ .slides .slide:nth-child(4) {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+#btn-4:not(:checked) ~ .slides .slide:nth-child(4) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+    0% {
+        transform: translatex(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translatex(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(100%);
+    }
+}
+
+
+
+#div22 {
+    width: 60%;
+    margin-right: 50%;
+    height: 80vh;
+    justify-content: left;
+    transition: all 0.5s ease-in-out;
+    position:relative;
+    z-index:1;
+}
+#div22 img {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    height: 80vh;
+}
+#texte2 {
+    position:absolute;
+    font-size: 111%;
+    text-align: center;
+    width:40%;
+    height:80vh;
+    margin-left: 60%;
+    z-index: 2;
+}
+#texte2  h2 {
+   margin-top: 45%;
+}
+
+
+
+
+.carousel {
+    margin-top: 20vh;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 10vh;
+}
+
+
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    left: 2%;
+    display: flex;
+}
+.container h1 {
+    margin-left: 33%;
+    position: absolute;
+    text-align: center;
+}
+.card {
+    left: 2%;
+    display: flex;
+    height: 50vh;
+    width: 21.5vw;
+    background-color: #2D8B9B;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #9CCBCB;
+    margin-top: 13vh;
+    transition: 0.4s ease-out;
+    position: relative;
+
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: #9CCBCB;
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #17141d;
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
